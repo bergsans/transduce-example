@@ -177,5 +177,174 @@ for (let i = 1000; i < 1e7; i *= 4) {
 
 What we can safely conclude is that the hipsteresque implementation is problematic. We can use it for sets larger than 1000 elements without facing stack overflow. Also, even with small sets it's an inefficient solution. We know that the imperative solution always will be the fastest.
 
-When comparing efficiency between the remaining three 'fuctional' solutions, the set must include 1 million or more elements for it to be relevant. With the regard to functional programming we can also arguable claim that the standard, 'vanilla' solution is problematic. The fact that ...
+When comparing efficiency between the remaining three 'fuctional' solutions, the set must include 1 million or more elements for it to be relevant. With the regard to functional programming we can also arguable claim that the standard, 'vanilla' solution is problematic.
+
+```
+-------------------------------------
+Array size: 1000
+-------------------------------------
+SLOW
+Result: 4995000
+Time: 17 milliseconds.
+-------------------------------------
+STANDARD JS CHAIN
+Result: 4995000
+Time: 0 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 4995000
+Time: 0 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 499500
+Time: 0 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 4995000
+Time: 0 milliseconds.
+-------------------------------------
+
+
+-------------------------------------
+Array size: 4000
+-------------------------------------
+SLOW
+Result: 79980000
+Time: 132 milliseconds.
+-------------------------------------
+STANDARD JS CHAIN
+Result: 79980000
+Time: 0 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 79980000
+Time: 1 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 7998000
+Time: 0 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 79980000
+Time: 2 milliseconds.
+-------------------------------------
+
+
+-------------------------------------
+Array size: 16000
+-------------------------------------
+SLOW = STACK OVERFLOW
+-------------------------------------
+STANDARD JS CHAIN
+Result: 1279920000
+Time: 2 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 1279920000
+Time: 2 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 127992000
+Time: 1 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 1279920000
+Time: 1 milliseconds.
+-------------------------------------
+
+
+-------------------------------------
+Array size: 64000
+-------------------------------------
+SLOW = STACK OVERFLOW
+-------------------------------------
+STANDARD JS CHAIN
+Result: 20479680000
+Time: 7 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 20479680000
+Time: 5 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 2047968000
+Time: 1 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 20479680000
+Time: 4 milliseconds.
+-------------------------------------
+
+
+-------------------------------------
+Array size: 256000
+-------------------------------------
+SLOW = STACK OVERFLOW
+-------------------------------------
+STANDARD JS CHAIN
+Result: 327678720000
+Time: 15 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 327678720000
+Time: 5 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 32767872000
+Time: 1 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 327678720000
+Time: 2 milliseconds.
+-------------------------------------
+
+
+-------------------------------------
+Array size: 1024000
+-------------------------------------
+SLOW = STACK OVERFLOW
+-------------------------------------
+STANDARD JS CHAIN
+Result: 5242874880000
+Time: 63 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 5242874880000
+Time: 29 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 524287488000
+Time: 8 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 5242874880000
+Time: 3 milliseconds.
+-------------------------------------
+
+
+-------------------------------------
+Array size: 4096000
+-------------------------------------
+SLOW = STACK OVERFLOW
+-------------------------------------
+STANDARD JS CHAIN
+Result: 83886059520000
+Time: 248 milliseconds.
+-------------------------------------
+A BIT OPTIMIZED
+Result: 83886059520000
+Time: 109 milliseconds.
+-------------------------------------
+TRANSDUCE
+Result: 8388605952000
+Time: 34 milliseconds.
+-------------------------------------
+IMPERATIVE SOLUTION
+Result: 83886059520000
+Time: 9 milliseconds.
+-------------------------------------
+
+
+
+```
 
