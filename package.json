@@ -1,0 +1,19 @@
+{
+  "name": "transduce-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fp.js",
+  "scripts": {
+    "test": "jest",
+    "result": "node fp.js > result.data"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.4.2"
+  }
+}
